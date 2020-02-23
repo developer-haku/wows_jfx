@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1600.0" prefWidth="1200.0" stylesheets="@../css/PlayerInfoStylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.haku.wows.controller.PlayerInfoController">
+    <children>
+        <Label fx:id="playerNameLabel" layoutY="10.0" prefHeight="48.0" prefWidth="675.0" styleClass="player-name-label">
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="clanNameLabel" layoutY="63.0" prefHeight="48.0" prefWidth="675.0" styleClass="player-name-label">
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="119.0" text="Average Battle Value">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="261.0" text="Warships stats by type">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="431.0" text="Warships stats by tier">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="1028.0" layoutY="753.0" text="Online History">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="604.0" layoutY="753.0" text="Records">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="753.0" text="Weapons Statistics">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="1008.0" text="Important Moment">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="657.0" layoutY="1008.0" text="Rank History">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="1259.0" text="Ship Stats">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Arc fx:id="osWinRateRing" fill="#2a5f90" layoutX="1076.0" layoutY="139.0" length="360.0" radiusX="100.0" radiusY="100.0" startAngle="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+        <Circle fill="#f4f4f4" layoutX="1076.0" layoutY="139.0" radius="71.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Label layoutX="1052.0" layoutY="14.0" text="Win Rate" />
+        <Label fx:id="osWinRateLb" alignment="CENTER" contentDisplay="CENTER" layoutX="1035.0" layoutY="126.0" text="00.00%" textAlignment="CENTER">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="osBasicTB" layoutX="689.0" layoutY="10.0" prefHeight="101.0" prefWidth="271.0" styleClass="os-basic-table">
+            <columns>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Battles">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="battles" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="98.0" sortable="false" text="Personal Rating">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="battles" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="97.0" sortable="false" text="Battles survived">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="battles" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="avgBattleValueTB" layoutX="14.0" layoutY="147.0" prefHeight="100.0" prefWidth="946.0" styleClass="avg-battle-value-table">
+            <columns>
+                <TableColumn editable="false" prefWidth="83.0" sortable="false" text="Damage">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgDMG" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="139.0" sortable="false" text="Destroyed Warships">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgFrags" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="120.0" sortable="false" text="Aircraft Destroyed">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgShootDown" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="105.0" sortable="false" text="Experience">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgEXP" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="106.0" sortable="false" text="Kill / Deaths">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgKD" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="151.0" sortable="false" text="Warships Spotted">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgSpot" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="172.0" sortable="false" text="Damage Upon Spotting">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgSpotDMG" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="69.0" sortable="false" text="Tier">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgTier" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="shipTypeTB" layoutX="14.0" layoutY="288.0" prefHeight="125.0" prefWidth="1164.0" styleClass="ship-type-table">
+            <columns>
+                <TableColumn prefWidth="83.0" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="type" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="60.0" text="Battles">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="battles" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="60.0" text="Win Rate">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="winRate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="100.0" text="Personal Rating">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="personalRating" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Avg. Frags">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgFrags" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="70.0" text="Avg. Dmg">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgDMG" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="110.0" text="Avg. Shoot Down">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgShootDown" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Max Frags">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxFrags" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Max Damage">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxDMG" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Max Shoot Down">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxShootDown" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="shipTierTB" layoutX="14.0" layoutY="461.0" prefHeight="275.0" prefWidth="1164.0" styleClass="ship-tier-table">
+            <columns>
+                <TableColumn prefWidth="83.0" text="Tier">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="tier" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="60.0" text="Battles">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="battles" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="60.0" text="Win Rate">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="winRate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="100.0" text="Personal Rating">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="personalRating" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Avg. Frags">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgFrags" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="70.0" text="Avg. Dmg">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgDMG" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="110.0" text="Avg. Shoot Down">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="avgShootDown" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Max Frags">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxFrags" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Max Damage">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxDMG" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Max Shoot Down">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxShootDown" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="weaponStatsTB" layoutX="14.0" layoutY="781.0" prefHeight="200.0" prefWidth="576.0" styleClass="weapon-stats-table">
+            <columns>
+                <TableColumn prefWidth="143.0" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="weaponType" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="68.0" text="Total Frags">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="totalFrags" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="56.0" text="Hit Ratio">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="hitRatio" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="57.0" text="Max Kills">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxKillNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="251.0" text="Max Kill Ship Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="maxKillShip" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="recordsTB" layoutX="600.0" layoutY="781.0" prefHeight="200.0" prefWidth="410.0">
+            <columns>
+                <TableColumn prefWidth="156.0" text="Type">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="type" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="95.0" text="Record Number">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="recordNum" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="0.0" prefWidth="158.0" text="Record Ship">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="recordShip" />
+                   </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="olHistoryTB" layoutX="1021.0" layoutY="781.0" prefHeight="200.0" prefWidth="156.0">
+            <columns>
+                <TableColumn prefWidth="46.0" text="Year">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="year" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="51.0" text="Month">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="month" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="58.0" text="Battles">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="battles" />
+                   </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="importantMomentTB" layoutX="14.0" layoutY="1040.0" prefHeight="200.0" prefWidth="609.0">
+            <columns>
+                <TableColumn prefWidth="149.0" text="Type">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="momentType" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="44.0" text="Year">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="year" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="53.0" text="Month">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="month" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="42.0" text="Day">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="day" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="320.0" text="Moment">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="moment" />
+                   </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="rankHistoryTB" layoutX="643.0" layoutY="1040.0" prefHeight="200.0" prefWidth="534.0">
+            <columns>
+                <TableColumn prefWidth="234.0" text="Season">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="season" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="69.0" text="Rank">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="rank" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="73.0" text="Best Rank">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="bestRank" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="68.0" text="Battles">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="battles" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="89.0" text="Win Rate">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="winRate" />
+                   </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="shipStatsTB" layoutX="14.0" layoutY="1286.0" prefHeight="300.0" prefWidth="1164.0">
+            <columns>
+                <TableColumn minWidth="294.0" prefWidth="294.0" text="Ship Name">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="name" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="94.0" prefWidth="94.0" text="Total Battles">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="totalBattles" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="94.0" prefWidth="94.0" text="Win Rate">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="winRate" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="294.0" prefWidth="294.0" text="Average Damage">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="avgDMG" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="194.0" prefWidth="194.0" text="Average Frags">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="avgFrags" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="194.0" prefWidth="194.0" text="Average Plane Kills">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="avgShootDown" />
+                   </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

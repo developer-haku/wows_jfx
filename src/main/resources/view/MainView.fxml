@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.haku.wows.controller.FXMLController">
+   <children>
+      <AnchorPane id="top_bar" prefHeight="50.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="53.0" layoutX="404.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/detonation.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="452.0" layoutY="8.0" text="World of Warships Player Search" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="50.0" prefHeight="750.0" prefWidth="1200.0">
+         <children>
+            <Label layoutX="506.0" layoutY="18.0" text="Player Name:" />
+            <JFXComboBox fx:id="serverCB" layoutX="386.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label layoutX="332.0" layoutY="18.0" text="Server" />
+            <JFXButton layoutX="816.0" layoutY="14.0" onMouseClicked="#buttonSearchPlayer" text="Search" />
+            <JFXTextField fx:id="playerNameInputTF" layoutX="596.0" layoutY="14.0" onKeyPressed="#enterSearchPlayer" prefHeight="25.0" prefWidth="200.0" />
+            <ScrollPane fx:id="playerInfoSP" layoutY="58.0" prefHeight="700.0" prefWidth="1200.0" styleClass="player_info_sp" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

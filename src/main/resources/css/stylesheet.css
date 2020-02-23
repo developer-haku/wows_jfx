@@ -1,0 +1,25 @@
+#top_bar {
+    -fx-background-color: #114047;
+}
+
+#background {
+    -fx-background-color: #FAFAFA;
+}
+
+.side_menu {
+    -fx-background-color: #FFFFFF;
+}
+
+.jfx-hamburger {
+	-fx-background-color: #114047;
+}
+
+.jfx-hamburger StackPane {
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius : 5px;
+}
+
+.footer {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #114047;
+}

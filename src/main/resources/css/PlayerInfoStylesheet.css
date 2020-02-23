@@ -1,0 +1,40 @@
+.player-name-label {
+    -fx-background-color: #114047;
+    -fx-text-fill: #FFFFFF;
+}
+
+.progress-indicator:determinate > .spinner {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.column-header {
+    -fx-background-color: #FAFAFA;
+    -fx-border-style: none solid solid none;
+    -fx-border-width: 0.0px 0.5px 0.5px 0.0;
+    -fx-border-color: lightgray;
+}
+
+.table-column {
+  -fx-alignment: CENTER;
+}
+
+.os-basic-table .table-row-cell,
+.avg-battle-value-table .table-row-cell, {
+    -fx-cell-size: 75px;
+}
+
+.ship-type-table > .table-row-cell,
+.ship-tier-table > .table-row-cell, {
+    -fx-cell-size: 25px;
+}
+
+.scroll-bar * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
